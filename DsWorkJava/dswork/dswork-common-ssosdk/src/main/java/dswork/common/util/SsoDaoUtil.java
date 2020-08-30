@@ -1,0 +1,232 @@
+package dswork.common.util;
+
+import java.util.List;
+import java.util.Locale;
+
+import dswork.common.dao.DsBaseSystemDao;
+import dswork.common.dao.SsoDao;
+import dswork.common.model.IBind;
+import dswork.common.model.IFunc;
+import dswork.common.model.IOrg;
+import dswork.common.model.ISystem;
+import dswork.common.model.IUser;
+import dswork.common.model.IUserBind;
+import dswork.common.model.IUserBindState;
+import dswork.common.model.IUserBm;
+import dswork.spring.BeanFactory;
+
+public class SsoDaoUtil
+{
+	private static SsoDao dao = null;
+
+	private static void init()
+	{
+		if(dao == null)
+		{
+			dao = (SsoDao) BeanFactory.getBean("ssoDao");
+		}
+	}
+
+	public List<IBind> queryListBind()
+	{
+		init();
+		return dao.queryListBind();
+	}
+
+	public IUser getUserByBm(String bm)
+	{
+		init();
+		return dao.getUserByBm(bm);
+	}
+
+	public int saveUser(IUser user)
+	{
+		init();
+		return dao.saveUser(user);
+	}
+
+	public int deleteUser(long id)
+	{
+		init();
+		return dao.deleteUser(id);
+	}
+
+	public IUser getUserById(long id)
+	{
+		init();
+		return dao.getUserById(id);
+	}
+
+	public IUserBind getUserBindById(long id)
+	{
+		init();
+		return dao.getUserBindById(id);
+	}
+
+	public int updateUser(IUser user)
+	{
+		init();
+		return dao.updateUser(user);
+	}
+
+	public int updateUserData(IUser user)
+	{
+		init();
+		return dao.updateUserData(user);
+	}
+
+	public int updateUserPassword(long userid, String password)
+	{
+		init();
+		return dao.updateUserPassword(userid, password);
+	}
+
+	public int updateUserAccount(long userid, String account)
+	{
+		init();
+		return dao.updateUserAccount(userid, account);
+	}
+
+	public IUserBind saveOrUpdateUserBind(IUserBind userBind, boolean isCreateUser, IUser bindUser)
+	{
+		init();
+		return dao.saveOrUpdateUserBind(userBind, isCreateUser, bindUser);
+	}
+
+	public int updateUserBind(IUserBind userBind)
+	{
+		init();
+		return dao.updateUserBind(userBind);
+	}
+
+	public int updateUserid(IUser user, String oldBm, String newBm)
+	{
+		init();
+		return dao.updateUserid(user, oldBm, newBm);
+	}
+
+	public int saveUser(IUser user, String reg_type)
+	{
+		init();
+		return dao.saveUser(user, reg_type);
+	}
+
+	public int saveUserBm(IUserBm userBm)
+	{
+		init();
+		return dao.saveUserBm(userBm);
+	}
+
+	public IUserBm getUserBm(String bm)
+	{
+		init();
+		return dao.getUserBm(bm.toLowerCase(Locale.ENGLISH));
+	}
+
+	public List<IUserBindState> getUserBindStateByUserId(long userid)
+	{
+		init();
+		return dao.getUserBindStateByUserId(userid);
+	}
+
+	public int updateUserBindForUnBind(long userid, String bindids)
+	{
+		init();
+		return dao.updateUserBindForUnBind(userid, bindids);
+	}
+	
+	public List<IUserBind> queryUserBindByUnionid(String unionid)
+	{
+		init();
+		return dao.queryUserBindByUnionid(unionid);
+	}
+
+	//////////////////////////// api////////////////////////////
+	public void updateUserPassword(String account, String password)
+	{
+		init();
+		dao.updateUserPassword(account, password);
+	}
+
+	public IUser getUserByBmNotSecret(String account)
+	{
+		init();
+		return dao.getUserByBmNotSecret(account);
+	}
+
+	public IUser getUserByOpenid(long openid)
+	{
+		init();
+		return dao.getUserByOpenid(openid);
+	}
+
+	// public IUser[] queryUserByPostid(String postid)
+	// {
+	// init();
+	// return dao.queryUserByPostid(postid);
+	// }
+	public IUser[] queryUserByOrgPid(String orgpid)
+	{
+		init();
+		return dao.queryUserByOrgPid(orgpid);
+	}
+
+	public IUser[] queryUserByOrgId(String orgid)
+	{
+		init();
+		return dao.queryUserByOrgId(orgid);
+	}
+
+	public ISystem getSystem(String systemAlias)
+	{
+		init();
+		return DsBaseSystemDao.getISystem(systemAlias);
+	}
+
+	public ISystem[] getSystemByUser(String account)
+	{
+		init();
+		return dao.getSystemByUser(account);
+	}
+
+	public IFunc[] getFuncBySystemAlias(String systemAlias)
+	{
+		init();
+		return dao.getFuncBySystemAlias(systemAlias);
+	}
+
+	public IFunc[] getFuncBySystemAliasAndAccount(String systemAlias, String account)
+	{
+		init();
+		return dao.getFuncBySystemAliasAndAccount(systemAlias, account);
+	}
+
+	public IFunc[] getFuncBySystemAliasAndOrgid(String systemAlias, String orgid)
+	{
+		init();
+		return dao.getFuncBySystemAliasAndOrgid(systemAlias, orgid);
+	}
+
+	// public IOrg[] getPostByUserId(Long userid)
+	// {
+	// init();
+	// return dao.queryPostByUserId(userid);
+	// }
+	public IOrg getOrgByOrgId(String orgid)
+	{
+		init();
+		return dao.getOrgByOrgId(orgid);
+	}
+
+	public IOrg[] queryOrgByOrgPid(String orgpid)
+	{
+		init();
+		return dao.queryOrgByOrgPid(orgpid);
+	}
+	
+	public void saveUserLog(String appid, String atype, String acode, int optype, String opread, boolean isSuccess, String ip, Long userid, String bm, String name)
+	{
+		init();
+		dao.saveUserLog(appid, atype, acode, optype, opread, isSuccess, ip, userid, bm, name);
+	}
+}
