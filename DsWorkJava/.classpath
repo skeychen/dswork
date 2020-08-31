@@ -30,8 +30,8 @@
 	<classpathentry kind="lib" path="/Lib/module/lucene/lucene-core-5.5.4.jar"/>
 	<classpathentry kind="lib" path="/Lib/module/template/freemarker-2.3.27.jar"/>
 	<classpathentry kind="lib" path="/Lib/database/mysql/mysql-connector-java-5.1.45-bin.jar"/>
-	<classpathentry kind="lib" path="/Lib/database/redis/commons-pool2-2.6.1.jar"/>
-	<classpathentry kind="lib" path="/Lib/database/redis/jedis-3.1.0.jar"/>
+	<classpathentry kind="lib" path="/Lib/database/redis/commons-pool2-2.6.2.jar"/>
+	<classpathentry kind="lib" path="/Lib/database/redis/jedis-3.3.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JAVAEE"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/DSWORK"/>
 	<classpathentry kind="output" path="web/WEB-INF/classes"/>
