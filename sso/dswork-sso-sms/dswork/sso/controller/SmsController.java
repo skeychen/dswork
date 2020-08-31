@@ -55,7 +55,6 @@ public class SmsController
 		}
 		ResponseUtil.printJson(response, CodeUtil.CODE_400);
 	}
-	
 
 	/**
 	 * 输入电话来发送短信
@@ -67,16 +66,15 @@ public class SmsController
 		return SEND_MESSAGE_ALIYUN(appid, mobile);
 	}
 
-
 	public static boolean SEND_MESSAGE_ALIYUN(String appid, String mobile)
 	{
 		try
 		{
 			int smscode = (int) ((Math.random() * 9 + 1) * 100000);
-			String accessKeyId = "testId";// "testId";
-			String accessSecret = "testSecret";// "testSecret";
-			String signName = "";// 必填:短信签名-可在短信控制台中找到
-			String templateCode = "";// 必填:短信模板-可在短信控制台中找到
+			String accessKeyId = "";// "testId";
+			String accessSecret = "";// "testSecret";
+			String signName = "阿里云短信测试专用";// 必填:短信签名-可在短信控制台中找到
+			String templateCode = "SMS_105250497";// 必填:短信模板-可在短信控制台中找到
 			// String mobile = "";// 必填:待发送手机号
 			String msgJson = "{\"code\":\"" + smscode + "\"}";// 可选:模板中的变量替换JSON串,如模板内容为"亲爱的${name},您的验证码为${code}"时,此处的值为
 			String outid = "dswork";// 可选:outId为提供给业务方扩展字段,最终在短信回执消息中将此值带回给调用者
@@ -100,8 +98,16 @@ public class SmsController
 	}
 
 	/**
-	 * {"Message":"OK","RequestId":"D5992B13-F912-4307-AD8E-63427AA22CBF","BizId":"303717826362176026^0","Code":"OK"}
-	 * @return json
+	 * 阿里云短信平台发送短信
+	 * @param accessKeyId 访问ID
+	 * @param accessSecret 访问密钥
+	 * @param signName 短信签名-可在短信控制台中找到
+	 * @param templateCode 短信模板-可在短信控制台中找到，如模板内容为"尊敬的${name},您的验证码为${code}"
+	 * @param mobile 待发送手机号
+	 * @param msgJson 可选:短信数据集，如上模板内容时，此处的值为{"name":"张三","code":"000000"}
+	 * @param outid 可选:outId为提供给业务方扩展字段,最终在短信回执消息中将此值带回给调用者
+	 * @return json {"Message":"OK","RequestId":"D5992B13-F912-4307-AD8E-63427AA22CBF","BizId":"303717826362176026^0","Code":"OK"}
+	 * @throws Exception
 	 */
 	public static String sendSMS(String accessKeyId, String accessSecret, String signName, String templateCode, String mobile, String msgJson, String outid) throws Exception
 	{
@@ -157,18 +163,34 @@ public class SmsController
 	{
 		return java.net.URLEncoder.encode(value, "UTF-8").replace("+", "%20").replace("*", "%2A").replace("%7E", "~");
 	}
+	
+	private static boolean isBase64 = false;
+	static
+	{
+		try
+		{
+			Class.forName("java.util.Base64");
+			isBase64 = true;
+		}
+		catch(ClassNotFoundException ex)
+		{
+		}
+	}
 
 	@SuppressWarnings("all")
 	private static String encodeBase64(byte[] str)
 	{
 		try
 		{
-			Class.forName("java.util.Base64");
-			return java.util.Base64.getEncoder().encodeToString(str);
+			if(isBase64)
+			{
+				return java.util.Base64.getEncoder().encodeToString(str);
+			}
+			return (new sun.misc.BASE64Encoder()).encode(str);
 		}
-		catch(ClassNotFoundException ex)
+		catch(Exception e)
 		{
+			return null;
 		}
-		return (new sun.misc.BASE64Encoder()).encode(str);
 	}
 }
