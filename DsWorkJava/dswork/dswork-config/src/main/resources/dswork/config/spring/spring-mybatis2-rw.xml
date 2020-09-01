@@ -5,7 +5,7 @@
 	        http://www.springframework.org/schema/beans 
 	        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
 	   default-autowire="byName" default-lazy-init="false">
-	<bean id="masterDataSource2" class="${dswork.datasource:org.apache.commons.dbcp.BasicDataSource}" destroy-method="close">
+	<bean id="masterDataSource2" class="${dswork.datasource:dswork.config.BasicDataSource}" destroy-method="close">
 		<property name="driverClassName" value="${jdbc2.driverClassName:dswork.jdbc.DriverSpy}" />
 		<property name="url" value="${jdbc2.url}" />
 		<property name="username" value="${jdbc2.username}" />
@@ -27,7 +27,7 @@
 		
 		<property name="poolPreparedStatements" value="${jdbc2.poolPreparedStatements:false}" />
 	</bean>
-	<bean id="slaveDataSource2" class="${dswork.datasource:org.apache.commons.dbcp.BasicDataSource}" destroy-method="close">
+	<bean id="slaveDataSource2" class="${dswork.datasource:dswork.config.BasicDataSource}" destroy-method="close">
 		<property name="driverClassName" value="${jdbc2.read.driverClassName:${jdbc2.driverClassName:dswork.jdbc.DriverSpy}}" />
 		<property name="url" value="${jdbc2.read.url}" />
 		<property name="username" value="${jdbc2.read.username:${jdbc2.username}}" />
