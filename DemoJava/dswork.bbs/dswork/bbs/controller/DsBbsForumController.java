@@ -166,7 +166,6 @@ public class DsBbsForumController extends BaseController
 		{
 			Long id = req().getLong("siteid", -1), siteid = -1L;
 			Map<String, Object> map = new HashMap<String, Object>();
-			map.put("own", getOwn());
 			PageRequest rq = new PageRequest(map);
 			List<DsBbsSite> siteList = service.queryListSite(rq.getFilters());
 			if(siteList != null && siteList.size() > 0)
@@ -279,30 +278,11 @@ public class DsBbsForumController extends BaseController
 
 	private boolean checkOwn(Long siteid)
 	{
-		try
-		{
-			return checkOwn(service.getSite(siteid).getOwn());
-		}
-		catch(Exception ex)
-		{
-		}
-		return false;
+		return true;
 	}
 
 	private boolean checkOwn(String own)
 	{
-		try
-		{
-			return own.equals(getOwn());
-		}
-		catch(Exception ex)
-		{
-		}
-		return false;
-	}
-	
-	private String getOwn()
-	{
-		return dswork.authown.AuthOwnUtil.getUser(request()).getOwn();
+		return true;
 	}
 }

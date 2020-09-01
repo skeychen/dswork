@@ -35,7 +35,6 @@ public class DsBbsSiteController extends BaseController
 	{
 		try
 		{
-			po.setOwn(getOwn());
 			service.save(po);
 			print(1);
 		}
@@ -104,7 +103,6 @@ public class DsBbsSiteController extends BaseController
 	public String getSite()
 	{
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("own", getOwn());
 		put("list", service.queryList(map));
 		return "/bbs/admin/site/getSite.jsp";
 	}
@@ -120,18 +118,6 @@ public class DsBbsSiteController extends BaseController
 
 	private boolean checkOwn(String own)
 	{
-		try
-		{
-			return own.equals(getOwn());
-		}
-		catch(Exception ex)
-		{
-		}
-		return false;
-	}
-	
-	private String getOwn()
-	{
-		return dswork.authown.AuthOwnUtil.getUser(request()).getOwn();
+		return true;
 	}
 }
