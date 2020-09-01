@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="server"/>
-	<classpathentry kind="src" path="common"/>
-	<classpathentry excluding="dswork/cs/|testwork/controller/ManageMimeController.java|testwork/controller/ManageMyController.java" kind="src" path="src"/>
+	<classpathentry excluding="common/gov/" kind="src" path="common"/>
+	<classpathentry excluding="dswork/cs/|testwork/controller/ManageMimeController.java|testwork/controller/ManageMyController.java|testwork/controller/ManageExcelController.java" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JAVAEE">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
@@ -23,11 +23,6 @@
 			<accessrule kind="accessible" pattern="**"/>
 		</accessrules>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/OFFICE">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="/Lib/database/mysql/mysql-connector-java-5.1.45-bin.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
@@ -37,19 +32,7 @@
 	<classpathentry kind="lib" path="/Lib/module/mail.jar"/>
 	<classpathentry kind="lib" path="/Lib/module/zxing/zxing-core-3.3.3.jar"/>
 	<classpathentry kind="src" path="dswork.bbs"/>
-	<classpathentry kind="lib" path="lib/dswork-authown.jar"/>
-	<classpathentry kind="lib" path="lib/MQAPI.jar"/>
 	<classpathentry kind="lib" path="/Lib/module/dswork/db/dswork-db-redis.jar" sourcepath="/DsWorkJava">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Lib/database/redis/jedis-3.3.0.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Lib/database/redis/commons-pool2-2.6.2.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
