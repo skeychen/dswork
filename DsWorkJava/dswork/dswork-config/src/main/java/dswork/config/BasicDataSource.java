@@ -1,11 +1,29 @@
 package dswork.config;
 
-import dswork.jdbc.DriverSpy;
-
-public class BasicDataSource extends org.apache.commons.dbcp.BasicDataSource
+public class BasicDataSource extends org.apache.commons.dbcp2.BasicDataSource
 {
 	private String filters;
 	private int maxPoolPreparedStatementPerConnectionSize = -1;
+
+	public synchronized int getMaxActive()
+	{
+		return getMaxTotal();
+	}
+
+	public synchronized void setMaxActive(final int maxActive)
+	{
+		setMaxTotal(maxActive);
+	}
+
+	public synchronized long getMaxWait()
+	{
+		return getMaxWaitMillis();
+	}
+
+	public synchronized void setMaxWait(long maxWait)
+	{
+		setMaxWaitMillis(maxWait);
+	}
 
 	public String getFilters()
 	{
@@ -26,19 +44,19 @@ public class BasicDataSource extends org.apache.commons.dbcp.BasicDataSource
 	{
 		this.maxPoolPreparedStatementPerConnectionSize = maxPoolPreparedStatementPerConnectionSize;
 	}
-
-	@Override
-	protected org.apache.commons.dbcp.ConnectionFactory createConnectionFactory() throws java.sql.SQLException
-	{
-		if(driverClassName.equals("dswork.jdbc.DriverSpy"))
-		{
-			connectionProperties.put("user", username);
-			connectionProperties.put("password", password);
-			return new org.apache.commons.dbcp.DriverConnectionFactory(new DriverSpy(), url, connectionProperties);
-		}
-		else
-		{
-			return super.createConnectionFactory();
-		}
-	}
+	// @Override
+	// protected org.apache.commons.dbcp.ConnectionFactory createConnectionFactory() throws java.sql.SQLException
+	// {
+	// if(driverClassName.equals("dswork.jdbc.DriverSpy"))
+	// {
+	// connectionProperties.put("user", username);
+	// connectionProperties.put("password", password);
+	// return new org.apache.commons.dbcp.DriverConnectionFactory(new dswork.jdbc.DriverSpy(), url,
+	// connectionProperties);
+	// }
+	// else
+	// {
+	// return super.createConnectionFactory();
+	// }
+	// }
 }
