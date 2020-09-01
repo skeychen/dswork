@@ -1,3 +1,6 @@
+2020-09-01
+	整个依赖升级到Java8，dswork.config升级依赖org.apache.commons.dbcp2.BasicDataSource
+	
 2020-08-06
 	dswork修改了dswork.core下的类EncryptUtil
 		增加getRSAPublicKey、getRSAPrivateKey函数
