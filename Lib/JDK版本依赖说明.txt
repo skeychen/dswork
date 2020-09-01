@@ -1,50 +1,79 @@
-jdk5：
+版本说明
+jdk8：
+	主要：
+		[Java6] Spring (4.3.28：aop、beans、context、core、expression、jdbc、tx、web、webmvc)
+		[Java6] mybatis-3.2.8.jar
+		[Java6] mybatis-spring-1.3.3.jar
+		[Java6] dswork (9.1.0：config、core、http、jdbc、mvc、ognl、spring、web)
+		[Java6] gson-2.8.6
+		
+		[Java4] commons-logging-1.2
+		[Java4] commons-collections-3.2.2
+		[Java4] commons-lang-2.6
+		
+		[Java8] commons-io-2.7.jar [2.6是Java7]
+		
+		[Java8] commons-dbcp2-2.7.jar (jdbc4.2) [2.2是Java7，jdbc4.1]
+		[Java8] commons-pool2-2.8.1.jar [2.6.2是Java7]
+		[Java8] commons-lang3-3.11
+	次要：
+		[Java8] POI (4.1.1) (
+			[Java8] commons-collections4-4.4
+			[Java6] xmlbeans-3.1.0.jar
+			-- [Java8] xmlsec-2.1.5.jar
+			-- [Java8] commons-codec-1.14.jar
+		)
+		[Java6] commons-beanutils-1.9.4.jar
+	其他：
+		[Java6] commons-fileupload-1.4.jar
+
+
+
+jdk6：
+	主要：
+		[Java6] Spring (4.3.28：aop、beans、context、core、expression、jdbc、tx、web、webmvc)
+		[Java6] mybatis-3.2.8.jar
+		[Java6] mybatis-spring-1.3.3.jar
+		[Java6] dswork (9.0.0：config、core、http、jdbc、mvc、ognl、spring、web)
+		[Java6] gson-2.8.6
+		[Java4] aopalliance-1.0
+		[Java5] jstl-1.2.jar
+		
+		[Java4] commons-collections-3.2.2
+		[Java6] commons-dbcp-1.4.jar (jdbc4)
+		[Java6] commons-io-2.5.jar
+		[Java4] commons-lang-2.6
+		[Java4] commons-logging-1.2
+		[Java5] commons-pool-1.6.jar
+		
+		[Java5] slf4j-api-1.7.30
+		[Java6] log4j-api-2.3、log4j-core-2.3、log4j-slf4j-impl-2.3 [2.4-1.12.1是Java7]
+	次要：
+		[Java6] POI (3.17) (
+			[Java6] commons-collections4-4.1
+			[Java4] xmlbeans-2.6.0.jar
+		)
+	其他：
+		[Java6] commons-codec-1.11.jar [1.12、1.13是Java7]
+
+
+
+jdk5(不适用)：
 	增加：jsr173_1.0_api.jar (javax.xml.stream.*)
 	替换：
-		gson-2.3.1
-		Hibernate(3.6.10.Final)
-		Spring (3.2.18)
-		POI (3.10)
-		mybatis-3.1.1.jar
-		commons-dbcp-1.3.jar (jdbc3)
-		commons-io-2.2.jar
-		commons-codec-1.6.jar
-		commons-beanutils-1.9.2.jar (commons-collections-3.2.1、commons-logging-1.1.1)
-jdk6：
-	替换：
-		gson-2.8.0
-		Hibernate(4.2.21.Final)
-		Spring (4.0.9)
-		POI (3.15)
-		mybatis-3.2.8.jar
-		commons-dbcp-1.4.jar (jdbc4)
-		commons-io-2.5.jar
-		commons-codec-1.10.jar
-		commons-beanutils-1.9.3.jar (commons-collections-3.2.2、commons-logging-1.2)
-jdk7：
-	替换：
-		gson-2.8.0
-		Hibernate(4.2.21.Final)
-		Spring (4.0.9)
-		POI (3.15)
-		mybatis-3.2.8.jar
-		commons-dbcp2-2.2.jar (jdbc4.1)
-		commons-io-2.5.jar
-		commons-codec-1.10.jar
-		commons-beanutils-1.9.3.jar (commons-collections-3.2.2、commons-logging-1.2)
-
-###############################################
-以上所有都依赖Spring文件：
-	spring-aop.jar         spring-beans.jar       spring-context.jar     spring-core.jar        spring-expression.jar
-	spring-jdbc.jar        spring-orm.jar         spring-tx.jar          spring-web.jar         spring-webmvc.jar    
+		[Java5] Spring (3.2.18)
+		[Java5] mybatis-3.1.1.jar [3.2.0起是Java6]
+		[Java5] mybatis-spring-1.2.2.jar [1.2.3起是Java6]
+		-- [Java6] dswork (9.0.0)可能不支持
+		[Java5] gson-2.3.1
+		[Java5] POI (3.10)
+		[Java5] commons-dbcp-1.3.jar (jdbc3)
+		[Java5] commons-io-2.2.jar
+		[Java4] commons-logging-1.1.1
+		[Java5] commons-collections-3.2.1
+		[Java5] commons-beanutils-1.9.2.jar
+	其他：
+		[Java5] commons-codec-1.6.jar
+		[Java5] commons-fileupload-1.3.3.jar
 
 
-
-hibernate3：
-	antlr-2.7.6
-	antlr-runtime
-	javassist-3.15.0-GA
-	javax.persistence
-	jta-1.1
-	ognl-2.7.3
-	hibernate3.6.10

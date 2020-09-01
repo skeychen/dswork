@@ -6,7 +6,7 @@
         
         <archive path="/Lib/common/commons/commons-collections-3.2.2.jar"/>
         <archive path="/Lib/common/commons/commons-dbcp-1.4.jar"/>
-        <archive path="/Lib/common/commons/commons-io-2.5.jar"/>
+        <archive path="/Lib/common/commons/commons-io-2.7.jar"/>
         <archive path="/Lib/common/commons/commons-lang-2.6.jar"/>
         <archive path="/Lib/common/commons/commons-logging-1.2.jar"/>
         <archive path="/Lib/common/commons/commons-pool-1.6.jar"/>
