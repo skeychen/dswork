@@ -9,7 +9,7 @@ jdk8：
 		[Java5] jstl-1.2.jar
 		[Java6] gson-2.8.6
 		[Java8] commons-dbcp2-2.7.jar (jdbc4.2) [2.2是Java7，jdbc4.1]
-		[Java8] commons-pool2-2.8.1.jar [2.6.2是Java7]
+		[Java8] commons-pool2-2.8.1.jar [2.5.0-2.6.2是Java7]
 		[Java4] commons-logging-1.2
 		[Java5] slf4j-api-1.7.30
 		[Java6] log4j-api-2.13.3、log4j-core-2.13.3、log4j-slf4j-impl-2.13.3 [2.4-1.12.1是Java7]
@@ -24,10 +24,11 @@ jdk8：
 		)
 		[Java6] commons-beanutils-1.9.4.jar
 	其他：
+		[Java7] jedis-3.3.0.jar
+		
 		[Java8] commons-io-2.7.jar [2.6是Java7]
 		[Java8] commons-lang3-3.11
 		[Java6] commons-fileupload-1.4.jar
-
 
 
 jdk6：
@@ -51,6 +52,8 @@ jdk6：
 			[Java4] xmlbeans-2.6.0.jar
 		)
 	其他：
+		[Java6] commons-pool2-2.4.3.jar [2.5.0-2.6.2是Java7]
+		[Java6] jedis-2.9.0.jar [2.9.1起是Java7]
 		[Java6] commons-codec-1.11.jar [1.12、1.13是Java7]
 		[Java6] commons-io-2.5.jar
 
