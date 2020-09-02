@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <eclipse-userlibraries version="2">
     <library name="OFFICE" systemlibrary="false">
+        <archive path="/Lib/org/apache/commons/commons-collections4-4.4.jar"/>
         <archive path="/Lib/org/apache/poi/poi-4.1.2.jar"/>
         <archive path="/Lib/org/apache/poi/poi-ooxml-4.1.2.jar"/>
         <archive path="/Lib/org/apache/poi/poi-ooxml-schemas-4.1.2.jar"/>
-        <archive path="/Lib/org/apache/poi/xmlbeans-3.1.0.jar"/>
-        <archive path="/Lib/org/apache/commons/commons-collections4-4.4.jar"/>
+        <archive path="/Lib/org/apache/xmlbeans/xmlbeans-3.1.0.jar"/>
     </library>
 </eclipse-userlibraries>
