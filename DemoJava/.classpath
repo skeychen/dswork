@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="server"/>
 	<classpathentry excluding="common/gov/" kind="src" path="common"/>
-	<classpathentry excluding="dswork/cs/|testwork/controller/ManageMimeController.java|testwork/controller/ManageMyController.java|testwork/controller/ManageExcelController.java" kind="src" path="src"/>
+	<classpathentry excluding="dswork/cs/|testwork/controller/ManageMimeController.java|testwork/controller/ManageMyController.java" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JAVAEE">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
@@ -37,5 +37,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/OFFICE"/>
 	<classpathentry kind="output" path="web/WEB-INF/classes"/>
 </classpath>
