@@ -1,0 +1,19 @@
+Version 4.1.1 (2019-10-20)
+	updated dependencies to 
+		Bouncycastle 1.62
+		Commons-Codec 1.13
+		Commons-Collections4 4.4
+		Commons-Compress 1.19
+
+Version 4.1.0 (2019-04-09)
+	Improved support/fixes for Java 9+ and IBM JVM
+	New EMF renderer and support of SVG images in XSLF
+	Upgrade to XMLBeans 3.1.0
+	Upgrade to Bouncycastle 1.61
+	Upgrade to Curvesapi 1.06
+	Upgrade to Commons-Codec 1.12
+	Upgrade to Commons-Collections4 4.3
+	Upgrade to XMLSec 2.1.2
+	
+Version 4.0.1 (2018-12-03)
+	Upgrade to XMLBeans 3.0.2
