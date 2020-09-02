@@ -28,11 +28,11 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Lib/module/dswork/cs/dswork-cs.jar"/>
+	<classpathentry kind="lib" path="/Lib/dswork/dswork-cs.jar"/>
 	<classpathentry kind="lib" path="/Lib/module/mail.jar"/>
-	<classpathentry kind="lib" path="/Lib/module/zxing/zxing-core-3.3.3.jar"/>
+	<classpathentry kind="lib" path="/Lib/com/google/zxing/zxing-core-3.3.3.jar"/>
 	<classpathentry kind="src" path="dswork.bbs"/>
-	<classpathentry kind="lib" path="/Lib/module/dswork/db/dswork-db-redis.jar" sourcepath="/DsWorkJava">
+	<classpathentry kind="lib" path="/Lib/dswork/dswork-db.jar" sourcepath="/DsWorkJava">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
