@@ -7,9 +7,9 @@
         <archive path="/Lib/module/dswork/java6/commons-dbcp-1.4.jar"/>
         <archive path="/Lib/module/dswork/java6/commons-pool-1.6.jar"/>
         <archive path="/Lib/org/apache/logging/commons-logging-1.2.jar"/>
-        <archive path="/Lib/module/dswork/java6/log4j-api-2.13.3.jar"/>
-        <archive path="/Lib/module/dswork/java6/log4j-core-2.13.3.jar"/>
-        <archive path="/Lib/module/dswork/java6/log4j-slf4j-impl-2.13.3.jar"/>
+        <archive path="/Lib/module/dswork/java6/log4j-api-2.3.jar"/>
+        <archive path="/Lib/module/dswork/java6/log4j-core-2.3.jar"/>
+        <archive path="/Lib/module/dswork/java6/log4j-slf4j-impl-2.3.jar"/>
         <archive path="/Lib/org/apache/taglibs/jstl-1.2.jar"/>
         <archive path="/Lib/org/slf4j/slf4j-api-1.7.30.jar"/>
         
