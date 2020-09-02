@@ -3,7 +3,7 @@
     <library name="DSWORK6" systemlibrary="false">
         <archive path="/Lib/module/dswork/java6/commons-pool2-2.4.3.jar"/>
         <archive path="/Lib/module/dswork/java6/jedis-2.9.0.jar"/>
-        <archive path="/Lib/module/lucene/lucene-core-5.5.4.jar"/>
+        <archive path="/Lib/module/lucene/lucene-core-5.5.5.jar"/>
         <archive path="/Lib/module/template/freemarker-2.3.27.jar"/>
         
         <archive path="/Lib/com/google/gson/gson-2.8.6.jar"/>

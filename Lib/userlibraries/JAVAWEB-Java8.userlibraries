@@ -2,7 +2,6 @@
 <eclipse-userlibraries version="2">
     <library name="JAVAWEB" systemlibrary="false">
         <archive path="/Lib/com/google/gson/gson-2.8.6.jar"/>
-        
         <archive path="/Lib/org/aopalliance/aopalliance-1.0.jar"/>
         <archive path="/Lib/org/apache/commons/commons-dbcp2-2.7.0.jar"/>
         <archive path="/Lib/org/apache/commons/commons-pool2-2.8.1.jar"/>
@@ -10,8 +9,8 @@
         <archive path="/Lib/org/apache/logging/log4j/log4j-api-2.13.3.jar"/>
         <archive path="/Lib/org/apache/logging/log4j/log4j-core-2.13.3.jar"/>
         <archive path="/Lib/org/apache/logging/log4j/log4j-slf4j-impl-2.13.3.jar"/>
-        <archive path="/Lib/org/apache/taglibs/jstl-1.2.jar"/>
         <archive path="/Lib/org/slf4j/slf4j-api-1.7.30.jar"/>
+        <archive path="/Lib/org/apache/taglibs/jstl-1.2.jar"/>
         
         <archive path="/Lib/org/springframework/spring-aop.jar"/>
         <archive path="/Lib/org/springframework/spring-beans.jar"/>
