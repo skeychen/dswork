@@ -5,26 +5,27 @@ jdk8：
 		[Java6] mybatis-3.2.8.jar
 		[Java6] mybatis-spring-1.3.3.jar
 		[Java6] dswork (9.1.0：config、core、http、jdbc、mvc、ognl、spring、web)
+		[Java4] aopalliance-1.0
+		[Java5] jstl-1.2.jar
 		[Java6] gson-2.8.6
-		
-		[Java4] commons-logging-1.2
-		[Java4] commons-collections-3.2.2
-		[Java4] commons-lang-2.6
-		
-		[Java8] commons-io-2.7.jar [2.6是Java7]
-		
 		[Java8] commons-dbcp2-2.7.jar (jdbc4.2) [2.2是Java7，jdbc4.1]
 		[Java8] commons-pool2-2.8.1.jar [2.6.2是Java7]
-		[Java8] commons-lang3-3.11
+		[Java4] commons-logging-1.2
+		[Java5] slf4j-api-1.7.30
+		[Java6] log4j-api-2.13.3、log4j-core-2.13.3、log4j-slf4j-impl-2.13.3 [2.4-1.12.1是Java7]
+		
 	次要：
 		[Java8] POI (4.1.1) (
 			[Java8] commons-collections4-4.4
+			[Java7] commons-compress-1.20.jar
 			[Java6] xmlbeans-3.1.0.jar
 			-- [Java8] xmlsec-2.1.5.jar
 			-- [Java8] commons-codec-1.14.jar
 		)
 		[Java6] commons-beanutils-1.9.4.jar
 	其他：
+		[Java8] commons-io-2.7.jar [2.6是Java7]
+		[Java8] commons-lang3-3.11
 		[Java6] commons-fileupload-1.4.jar
 
 
@@ -34,18 +35,14 @@ jdk6：
 		[Java6] Spring (4.3.28：aop、beans、context、core、expression、jdbc、tx、web、webmvc)
 		[Java6] mybatis-3.2.8.jar
 		[Java6] mybatis-spring-1.3.3.jar
-		[Java6] dswork (9.0.0：config、core、http、jdbc、mvc、ognl、spring、web)
-		[Java6] gson-2.8.6
+		[Java6] dswork (9.0.0：config)
+		[Java6] dswork (9.0.0+：     、core、http、jdbc、mvc、ognl、spring、web)
 		[Java4] aopalliance-1.0
 		[Java5] jstl-1.2.jar
-		
-		[Java4] commons-collections-3.2.2
+		[Java6] gson-2.8.6
 		[Java6] commons-dbcp-1.4.jar (jdbc4)
-		[Java6] commons-io-2.5.jar
-		[Java4] commons-lang-2.6
-		[Java4] commons-logging-1.2
 		[Java5] commons-pool-1.6.jar
-		
+		[Java4] commons-logging-1.2
 		[Java5] slf4j-api-1.7.30
 		[Java6] log4j-api-2.3、log4j-core-2.3、log4j-slf4j-impl-2.3 [2.4-1.12.1是Java7]
 	次要：
@@ -55,6 +52,7 @@ jdk6：
 		)
 	其他：
 		[Java6] commons-codec-1.11.jar [1.12、1.13是Java7]
+		[Java6] commons-io-2.5.jar
 
 
 
@@ -69,8 +67,9 @@ jdk5(不适用)：
 		[Java5] POI (3.10)
 		[Java5] commons-dbcp-1.3.jar (jdbc3)
 		[Java5] commons-io-2.2.jar
+		[Java4] commons-lang-2.6
 		[Java4] commons-logging-1.1.1
-		[Java5] commons-collections-3.2.1
+		[Java5] commons-collections-3.2.2
 		[Java5] commons-beanutils-1.9.2.jar
 	其他：
 		[Java5] commons-codec-1.6.jar
