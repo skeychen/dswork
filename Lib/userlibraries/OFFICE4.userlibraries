@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <eclipse-userlibraries version="2">
-    <library name="OFFICE" systemlibrary="false">
+    <library name="OFFICE4" systemlibrary="false">
         <archive path="/Lib/org/apache/commons/commons-collections4-4.4.jar"/>
         <archive path="/Lib/org/apache/commons/commons-compress-1.20.jar"/>
         <archive path="/Lib/org/apache/poi/poi-4.1.2.jar"/>
