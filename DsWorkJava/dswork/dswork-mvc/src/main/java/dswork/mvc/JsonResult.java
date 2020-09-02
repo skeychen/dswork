@@ -21,7 +21,7 @@ public class JsonResult<T>
 
 	/**
 	 * 状态码
-	 * @param code
+	 * @param code 状态码
 	 */
 	public void setCode(int code)
 	{
@@ -39,7 +39,7 @@ public class JsonResult<T>
 
 	/**
 	 * 自定义泛型数据
-	 * @param data
+	 * @param data 泛型数据
 	 */
 	public void setData(T data)
 	{
@@ -57,7 +57,7 @@ public class JsonResult<T>
 
 	/**
 	 * 消息
-	 * @param msg
+	 * @param msg 消息
 	 */
 	public void setMsg(String msg)
 	{
