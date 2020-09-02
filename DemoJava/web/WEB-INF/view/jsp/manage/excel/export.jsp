@@ -34,7 +34,7 @@ row = sheet.createRow(titleRow);
 //new Region(开始行, 开始列, 结束行, 结束列);
 //new CellRangeAddress(开始行, 结束行, 开始列, 结束列);
 sheet.addMergedRegion(new org.apache.poi.ss.util.CellRangeAddress(0, 0, 0, 3));
-cell = row.createCell(colNum++, Cell.CELL_TYPE_STRING);
+cell = row.createCell(colNum++, CellType.STRING);
 cell.setCellStyle(cellStyleTitle);
 cell.setCellValue("数据导出");
 
@@ -44,19 +44,19 @@ if(true)
 	row = sheet.createRow(titleRow);
 	sheet.addMergedRegion(new org.apache.poi.ss.util.CellRangeAddress(1, 1, 1, 2));
 	colNum = 0;// 复位,设置excel的位置
-	cell = row.createCell(colNum++, Cell.CELL_TYPE_STRING);
+	cell = row.createCell(colNum++, CellType.STRING);
 	cell.setCellStyle(cellStyleTitle);
 	cell.setCellValue("主要信息");
 	
-	cell = row.createCell(colNum++, Cell.CELL_TYPE_STRING);
+	cell = row.createCell(colNum++, CellType.STRING);
 	cell.setCellStyle(cellStyleTitle);
 	cell.setCellValue("其它信息");
 	
-	cell = row.createCell(colNum++, Cell.CELL_TYPE_STRING);
+	cell = row.createCell(colNum++, CellType.STRING);
 	cell.setCellStyle(cellStyleTitle);
 	cell.setCellValue("测试信息1");// 这个列被合并了，并不会显示
 	
-	cell = row.createCell(colNum++, Cell.CELL_TYPE_STRING);
+	cell = row.createCell(colNum++, CellType.STRING);
 	cell.setCellStyle(cellStyleTitle);
 	cell.setCellValue("扩展信息");
 }
@@ -66,10 +66,10 @@ if(true)
 	titleRow++;
 	row = sheet.createRow(titleRow);
 	colNum = 0;// 复位,设置excel的位置
-	row.createCell(colNum++, Cell.CELL_TYPE_STRING).setCellValue("标题");
-	row.createCell(colNum++, Cell.CELL_TYPE_STRING).setCellValue("内容");
-	row.createCell(colNum++, Cell.CELL_TYPE_STRING).setCellValue("创建时间");
-	row.createCell(colNum++, Cell.CELL_TYPE_STRING).setCellValue("序号");
+	row.createCell(colNum++, CellType.STRING).setCellValue("标题");
+	row.createCell(colNum++, CellType.STRING).setCellValue("内容");
+	row.createCell(colNum++, CellType.STRING).setCellValue("创建时间");
+	row.createCell(colNum++, CellType.STRING).setCellValue("序号");
 }
 for(int i = 0; i < list.size(); i++)
 {
@@ -77,10 +77,10 @@ for(int i = 0; i < list.size(); i++)
 	titleRow++;
 	row = sheet.createRow(titleRow);
 	testwork.model.Demo d = list.get(i);
-	row.createCell(colNum++, Cell.CELL_TYPE_STRING).setCellValue(d.getTitle());
-	row.createCell(colNum++, Cell.CELL_TYPE_STRING).setCellValue(d.getContent());
-	row.createCell(colNum++, Cell.CELL_TYPE_STRING).setCellValue(d.getFoundtime());
-	row.createCell(colNum++, Cell.CELL_TYPE_STRING).setCellValue(i+1);
+	row.createCell(colNum++, CellType.STRING).setCellValue(d.getTitle());
+	row.createCell(colNum++, CellType.STRING).setCellValue(d.getContent());
+	row.createCell(colNum++, CellType.STRING).setCellValue(d.getFoundtime());
+	row.createCell(colNum++, CellType.STRING).setCellValue(i+1);
 }
 
 
@@ -94,7 +94,7 @@ if(true)
 	titleRow++;
 	row = sheet.createRow(titleRow);
 	
-	cell = row.createCell(2, Cell.CELL_TYPE_STRING);
+	cell = row.createCell(2, CellType.STRING);
 	cell.setCellStyle(cst);
 	cell.setCellValue("合计：");
 	
@@ -103,7 +103,7 @@ if(true)
 	String colstr = "";
 	colstr = org.apache.poi.hssf.util.CellReference.convertNumToColString(colNum);// D列
 	
-	cell = row.createCell(colNum, Cell.CELL_TYPE_STRING);
+	cell = row.createCell(colNum, CellType.STRING);
 	cst = wb.createCellStyle();// 创建标题格式
 	ft = wb.createFont();// 创建标题字体，设置其为黑色、粗体：
 	ft.setBold(true);
@@ -138,7 +138,7 @@ if(true)
 			row = sheet.createRow(titleRow);
 			colNum = 4;
 		}
-		cell = row.createCell(colNum++, Cell.CELL_TYPE_STRING);
+		cell = row.createCell(colNum++, CellType.STRING);
 
 		Font ft = wb.createFont();// 创建标题字体，设置其为黑色、粗体：
 		ft.setBold(true);
