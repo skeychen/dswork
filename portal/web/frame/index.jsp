@@ -32,8 +32,8 @@ boolean isTabs = true;// 是否开启选项卡
 <link rel="stylesheet" type="text/css" href="js/easyui/themes/default/layout_panel_tabs.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <script language="javascript">
-if(top.location != this.location){top.location = this.location;}
-<%--if(top.location != this.location){top.location = "<%=path %>/frame/index.jsp";}--%>
+<%--if(top.location != this.location){top.location = this.location;}--%>
+if(top.location != this.location){top.location = "<%=path %>/frame/index.jsp";}
 </script>
 </head>
 <body class="easyui-layout" fit="true" style="min-width:380px;">
@@ -55,22 +55,20 @@ if(top.location != this.location){top.location = this.location;}
 <div id="titleDIV" class="minititle">计算机管理控制程序</div>
 </div>
 <div region="west" data-options="collapsed:false,split:true" style="width:200px;overflow:hidden;">
-	<iframe id="leftFrame" name="leftFrame" scrolling="no" frameborder="0" src="left.jsp?isTabs=<%=isTabs%>"></iframe>
+	<iframe id="leftFrame" name="leftFrame" scrolling="no" frameborder="0" src="about:blank"></iframe>
 </div>
-<div region="center" data-options="border:false" style="overflow:hidden;">
-<%if(isTabs){%>
+<div id="frame_center" region="center" data-options="border:false" style="overflow:hidden;">
 	<div id="tt" class="easyui-tabs" data-options="fit:true,plain:false,tools:'#tab-tools'" style="overflow:hidden;">
-		<%--<div title="首页" style="overflow:hidden;" closable="false">
+<%--
+		<div title="首页" style="overflow:hidden;" closable="false">
 			<div style="overflow:hidden;width:100%;height:100%;"><iframe id="rightFrame" name="rightFrame" scrolling="no" frameborder="0" src="../portlet.jsp"></iframe></div>
-		</div>--%>
+		</div>
+--%>
 	</div>
 	<div id="tab-tools">
 		<a class="easyui-linkbutton" title="关闭当前" data-options="plain:true,iconCls:'icon-closeone'" onclick="if(true){var t=$('#tt').tabs('getSelected');if(t.panel('options').closable){$('#tt').tabs('close',$('#tt').tabs('getTabIndex',t));}}return false;" href="#"></a>
 		<a class="easyui-linkbutton" title="关闭所有" data-options="plain:true,iconCls:'icon-closeall'" onclick="if(true){var v=$('#tt').tabs('tabs').length;while(v>0){var t=$('#tt').tabs('getTab',v-1);if(t.panel('options').closable){$('#tt').tabs('close',$('#tt').tabs('getTabIndex',t));}v--;}}return false;" href="#"></a>
 	</div>
-<%}else{%>
-	<iframe id="tt" name="tt" scrolling="no" frameborder="0" src="about:blank"></iframe>
-<%}%>
 </div>
 <div region="south" data-options="border:false" style="height:24px;overflow:hidden;"><div class="bottomframe">
 	<span class="copyRight">&copy;</span>&nbsp;2014-2018&nbsp;249725997@qq.com
@@ -78,11 +76,17 @@ if(top.location != this.location){top.location = this.location;}
 	<img style="display:none;" src="/portal/frame/js/jskey/themes/menu/img/close.gif?version=1" />
 </div></div>
 </body>
-<script type="text/javascript" src="js/easyui/jquery.layout_panel_tabs.js"></script>
-
 <script language="javascript">
-if(top.location != this.location){top.location = "<%=path %>/frame/index.jsp";}
-function re(){<%if(isTabs){%>$('#tt').tabs('resize');<%}%>}
+var isTabs = <%=isTabs?"true":"false"%>;
+$("#leftFrame").attr("src", "left.jsp?isTabs=" + (isTabs ? "true" : "false"));
+
+if(isTabs){
+	document.write("<"+"script type='text/javascript' src='js/easyui/jquery.layout_panel_tabs.js'><"+"/script>");
+}
+else{
+	$("#frame_center").html('<iframe id="tt" name="tt" scrolling="no" frameborder="0" src="about:blank"></iframe>');
+}
+function re(){if(isTabs){$('#tt').tabs('resize');}}
 function GoDorp(o){
 	var m=document.getElementById("menu");
 	if(m.style.display=="none"){

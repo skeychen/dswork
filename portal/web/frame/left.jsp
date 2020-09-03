@@ -16,7 +16,6 @@ ISystem[] arr = AuthFactory.getSystemByUser(user.getAccount());
 <script type="text/javascript" src="${ctx}/frame/js/jskey/jskey.menu.js?version=20190911"></script>
 <script type="text/javascript" src="${ctx}/frame/js/jquery.js"></script>
 <script type="text/javascript">
-if(top.location == this.location){top.location = "${ctx}/index.jsp";}
 var sys = [];
 <%--
 sys[0] = {index:0,data:[],id:0,name:"门户",alias:"",domainurl:"",rooturl:"${ctx}",menuurl:"${ctx}/menu.jsp"};
@@ -95,7 +94,8 @@ function init(){menuload(sys[0]);}
 <body onselectstart="return false;" oncontextmenu="return true;">
 </body>
 <script type="text/javascript">
-$jskey.menu.isTabs = <%=String.valueOf(request.getParameter("isTabs")).equalsIgnoreCase("true") ? "true" : "false"%>;
+$jskey.menu.isTabs = location.href.indexOf("isTabs=false") != -1 ? false : true;
+<%--$jskey.menu.isTabs = <%=String.valueOf(request.getParameter("isTabs")).equalsIgnoreCase("true") ? "true" : "false"%>;--%>
 init();
 </script>
 </html>
