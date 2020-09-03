@@ -10,14 +10,10 @@ web
 
 
 
-
-
-
-
-
-
-
-
-
+jskey_core.js 由以下文件组合：
+	jskey_core
+	jskey_tooltip
+	jskey_page
+	jskey_calendar
 
 
