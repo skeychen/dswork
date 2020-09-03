@@ -22,12 +22,9 @@ boolean isTabs = true;// 是否开启选项卡
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
-<!--收藏夹显示图标-->
 <link rel="bookmark" type="image/x-icon" href="/favicon.ico"/>
-<!--地址栏显示图标-->
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-
 <link rel="stylesheet" type="text/css" href="style/frame.css" />
 <link rel="stylesheet" type="text/css" href="js/easyui/themes/default/layout_panel_tabs.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
