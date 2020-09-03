@@ -25,9 +25,9 @@ boolean isTabs = true;// 是否开启选项卡
 <link rel="bookmark" type="image/x-icon" href="/favicon.ico"/>
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="stylesheet" type="text/css" href="style/frame.css" />
-<link rel="stylesheet" type="text/css" href="js/easyui/themes/default/layout_panel_tabs.css" />
-<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="/web/js/frame/style/frame.css" />
+<link rel="stylesheet" type="text/css" href="/web/js/frame/js/easyui/themes/default/layout_panel_tabs.css" />
+<script type="text/javascript" src="/web/js/frame/js/jquery.js"></script>
 <script language="javascript">
 <%--if(top.location != this.location){top.location = this.location;}--%>
 if(top.location != this.location){top.location = "<%=path %>/frame/index.jsp";}
@@ -69,11 +69,11 @@ if(top.location != this.location){top.location = "<%=path %>/frame/index.jsp";}
 </div>
 <div region="south" data-options="border:false" style="height:24px;overflow:hidden;"><div class="bottomframe">
 	<span class="copyRight">&copy;</span>&nbsp;2014-2018&nbsp;249725997@qq.com
-	<img style="display:none;" src="/portal/frame/js/jskey/themes/menu/img/open.gif?version=1" />
-	<img style="display:none;" src="/portal/frame/js/jskey/themes/menu/img/close.gif?version=1" />
+	<img style="display:none;" src="/web/js/frame/js/jskey/themes/menu/img/open.gif?version=1" />
+	<img style="display:none;" src="/web/js/frame/js/jskey/themes/menu/img/close.gif?version=1" />
 </div></div>
 </body>
-<script type="text/javascript" src="js/easyui/jquery.layout_panel_tabs.js"></script>
+<script type="text/javascript" src="/web/js/frame/js/easyui/jquery.layout_panel_tabs.js"></script>
 <script language="javascript">
 var isTabs = <%=isTabs?"true":"false"%>;
 $("#leftFrame").attr("src", "left.jsp?isTabs=" + (isTabs ? "true" : "false"));
@@ -84,9 +84,9 @@ function re(){if(isTabs){$('#tt').tabs('resize');}}
 function GoDorp(o){
 	var m=document.getElementById("menu");
 	if(m.style.display=="none"){
-		o.title="关闭左边菜单";o.src="style/middle/open.gif";m.style.display="";
+		o.title="关闭左边菜单";o.src="/web/js/frame/style/middle/open.gif";m.style.display="";
 	}else{
-		o.title="打开左边菜单";o.src="style/middle/close.gif";m.style.display="none";
+		o.title="打开左边菜单";o.src="/web/js/frame/style/middle/close.gif";m.style.display="none";
 	}
 	re();
 }

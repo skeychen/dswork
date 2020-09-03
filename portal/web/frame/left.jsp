@@ -12,9 +12,9 @@ ISystem[] arr = AuthFactory.getSystemByUser(user.getAccount());
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
 <title></title>
-<link rel="stylesheet" type="text/css" href="${ctx}/frame/js/jskey/themes/menu/jskey.menu.css?version=20190911" />
-<script type="text/javascript" src="${ctx}/frame/js/jskey/jskey.menu.js?version=20190911"></script>
-<script type="text/javascript" src="${ctx}/frame/js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="/web/js/frame/js/jskey/themes/menu/jskey.menu.css?version=20190911" />
+<script type="text/javascript" src="/web/js/frame/js/jskey/jskey.menu.js?version=20190911"></script>
+<script type="text/javascript" src="/web/js/frame/js/jquery.js"></script>
 <script type="text/javascript">
 var sys = [];
 <%--
