@@ -56,10 +56,7 @@
 <script language="javascript">
 var isTabs = false;
 $("#leftFrame").attr("src", "left.html?isTabs=" + (isTabs ? "true" : "false"));
-if(isTabs){
-	document.write("<"+"script type='text/javascript' src='/web/js/frame/js/easyui/jquery.layout_panel_tabs.js'><"+"/script>");
-}
-else{
+if(!isTabs){
 	$("#frame_center").html('<iframe id="tt" name="tt" scrolling="no" frameborder="0" src="about:blank"></iframe>');
 }
 function re(){if(isTabs){$('#tt').tabs('resize');}}
