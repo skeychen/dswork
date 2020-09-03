@@ -32,7 +32,8 @@ boolean isTabs = true;// 是否开启选项卡
 <link rel="stylesheet" type="text/css" href="js/easyui/themes/default/layout_panel_tabs.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <script language="javascript">
-if(top.location != this.location){top.location = "<%=path %>/frame/index.jsp";}
+if(top.location != this.location){top.location = this.location;}
+<%--if(top.location != this.location){top.location = "<%=path %>/frame/index.jsp";}--%>
 </script>
 </head>
 <body class="easyui-layout" fit="true" style="min-width:380px;">
