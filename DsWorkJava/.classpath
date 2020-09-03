@@ -27,7 +27,7 @@
 	<classpathentry kind="src" path="dswork/dswork-ee/src/main/java"/>
 	<classpathentry kind="src" path="dswork/dswork-config/src/main/resources"/>
 	<classpathentry kind="src" path="dswork/dswork-web/src/main/resources"/>
-	<classpathentry kind="lib" path="/Lib/database/mysql/mysql-connector-java-5.1.45-bin.jar"/>
+	<classpathentry kind="lib" path="/Lib/database/mysql/mysql-connector-java-5.1.49.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JAVAEE"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/DSWORK"/>
 	<classpathentry kind="output" path="web/WEB-INF/classes"/>
