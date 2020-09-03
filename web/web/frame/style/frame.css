@@ -19,7 +19,7 @@ a:hover {color:#ffffff;}
 div.title    {margin-left:20px;line-height:70px;font-size:28px;}
 div.minititle {margin-left:10px;line-height:28px;font-size:14px;}
 
-.topframe {height:76px;width:100%;background-color:#376099;top:0;left:0;overflow:hidden;}
+.topframe {height:76px;width:100%;background-color:#003c7b;top:0;left:0;overflow:hidden;}
 .topframe img {border:none;margin:0;padding:0;vertical-align:middle;}
 .topframe i,.topframe b{color:#ffffff;font-style:normal;font-weight:normal;display:inline;vertical-align:baseline;text-decoration:inherit;}
 .topframe i {font-size:16px;font-family:'dsworkfont';height:auto;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:0.2px;-moz-osx-font-smoothing:grayscale;}
@@ -29,8 +29,8 @@ div.minititle {margin-left:10px;line-height:28px;font-size:14px;}
 .topframe .tool,
 .topframe .minitool{background-color:#6699cc;position:absolute;right:0;height:100%;overflow:hidden;text-align:right;}
 
-.topframe .xtool div{cursor:pointer;background:#376099;height:100%;text-align:center;vertical-align:middle;display:block;float:left;padding:0 5px;}
-.topframe .xtool div:hover{background:#6699cc;}
+.topframe .xtool div{cursor:pointer;background:#003c7b;height:100%;text-align:center;vertical-align:middle;display:block;float:left;padding:0 5px;}
+.topframe .xtool div:hover{background:#376099;}
 .topframe .xtool div img{float:left;}
 .topframe .xtool div i{float:left;}
 .topframe .xtool div b{float:left;font-size:14px;color:#eeeeee;padding:0 3px;font-weight:bold;font-family:"宋体"}
@@ -52,6 +52,6 @@ div.minititle {margin-left:10px;line-height:28px;font-size:14px;}
 .icon-closeall{background:url(middle/closeall.png) no-repeat;}
 
 .bottomframe {width:100%;height:100%;line-height:25px;color:#ffffff;text-align:center;
-	background-color: #376099;
+	background-color:#003c7b;
 }
 .bottomframe .copyRight {font-family:Arial;}
