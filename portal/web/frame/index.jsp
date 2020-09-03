@@ -73,14 +73,11 @@ if(top.location != this.location){top.location = "<%=path %>/frame/index.jsp";}
 	<img style="display:none;" src="/portal/frame/js/jskey/themes/menu/img/close.gif?version=1" />
 </div></div>
 </body>
+<script type="text/javascript" src="js/easyui/jquery.layout_panel_tabs.js"></script>
 <script language="javascript">
 var isTabs = <%=isTabs?"true":"false"%>;
 $("#leftFrame").attr("src", "left.jsp?isTabs=" + (isTabs ? "true" : "false"));
-
-if(isTabs){
-	document.write("<"+"script type='text/javascript' src='js/easyui/jquery.layout_panel_tabs.js'><"+"/script>");
-}
-else{
+if(!isTabs){
 	$("#frame_center").html('<iframe id="tt" name="tt" scrolling="no" frameborder="0" src="about:blank"></iframe>');
 }
 function re(){if(isTabs){$('#tt').tabs('resize');}}
