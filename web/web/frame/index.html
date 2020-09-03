@@ -52,11 +52,11 @@
 	<img style="display:none;" src="/web/js/frame/js/jskey/themes/menu/img/close.gif?version=1" />
 </div></div>
 </body>
+<script type="text/javascript" src="/web/js/frame/js/easyui/jquery.layout_panel_tabs.js"></script>
 <script language="javascript">
 var isTabs = true;
 $("#leftFrame").attr("src", "left.html?isTabs=" + (isTabs ? "true" : "false"));
 if(isTabs){
-	document.write("<"+"script type='text/javascript' src='/web/js/frame/js/easyui/jquery.layout_panel_tabs.js'><"+"/script>");
 }
 else{
 	$("#frame_center").html('<iframe id="tt" name="tt" scrolling="no" frameborder="0" src="about:blank"></iframe>');
