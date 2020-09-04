@@ -4,10 +4,10 @@ java.io.ByteArrayInputStream,java.io.InputStream,java.io.OutputStream"%><%
 // org.apache.poi.xssf.usermodel.*,
 // org.apache.poi.ss.usermodel.*,
 java.util.List<testwork.model.Demo> list = (java.util.List<testwork.model.Demo>)request.getAttribute("list");
-String ext = String.valueOf(request.getAttribute("ext"));
+String ext = String.valueOf(request.getAttribute("ext")).equals("xls") ? "xls" : "xlsx";
 String filename = "导出";
 response.setContentType("application/vnd.ms-excel");
-response.addHeader("Content-Disposition", "attachment;filename=\"" + (new String(filename.getBytes("GBK"), "ISO-8859-1")) + ".xlsx\"");
+response.addHeader("Content-Disposition", "attachment;filename=\"" + (new String(filename.getBytes("GBK"), "ISO-8859-1")) + "." + ext + "\"");
 OutputStream fos = response.getOutputStream();
 Workbook wb = null;
 if(ext.equals("xls")){
@@ -16,6 +16,7 @@ if(ext.equals("xls")){
 else{
 	wb = new org.apache.poi.xssf.streaming.SXSSFWorkbook(500);// xlsx
 }
+
 Sheet sheet = wb.createSheet();
 Font fontTitle = wb.createFont();// 创建标题字体，设置其为黑色、粗体：
 fontTitle.setBold(true);
