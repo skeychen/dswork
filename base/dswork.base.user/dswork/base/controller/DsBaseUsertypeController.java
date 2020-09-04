@@ -66,7 +66,7 @@ public class DsBaseUsertypeController extends BaseController
 					{
 						DsBaseUsertypeRes m = new DsBaseUsertypeRes();
 						m.setAlias(arr_alias[i].replaceAll("\\|", ""));
-						m.setName(arr_name[i]);
+						m.setName(arr_name[i].replaceAll("\\|", ""));
 						if(0 < m.getAlias().length())// 为空的不添加，直接忽略
 						{
 							list.add(m);
