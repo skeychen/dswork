@@ -48,6 +48,8 @@ $(function(){
 	});
 });
 </script>
+<style type="text/css">
+td.l{text-align:left;padding-left:3px;}</style>
 </head> 
 <body>
 <table border="0" cellspacing="0" cellpadding="0" class="listLogo">
@@ -90,8 +92,8 @@ $(function(){
 	<tr>
 		<td><input name="keyIndex" type="checkbox" value="${d.id}" ${d.id<0?'style="display:none;" disabled="disabled"':''}/></td>
 		<td class="menuTool" keyIndex="${d.id}" v="${d.id<0?'true':''}">&nbsp;</td>
-		<td>${fn:escapeXml(d.typename)}${d.exname==''?'':' - '}${fn:escapeXml(d.exname)}</td>
-		<td style="text-align:left;">&nbsp;${fn:escapeXml(d.account)}(${fn:escapeXml(d.name)})</td>
+		<td class="l">${fn:escapeXml(d.typename)}${d.exname==''?'':' - '}${fn:escapeXml(d.exname)}</td>
+		<td class="l">&nbsp;${fn:escapeXml(d.account)}(${fn:escapeXml(d.name)})</td>
 		<td>${fn:escapeXml(d.orgpname)}</td>
 		<td>${fn:escapeXml(d.orgname)}</td>
 		<td id="td_a_status${status.index}" style="color:${1==d.status?"":"red"}">${1==d.status?"启用":"禁用"}</td>
