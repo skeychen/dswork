@@ -90,7 +90,7 @@ $(function(){
 	<tr>
 		<td><input name="keyIndex" type="checkbox" value="${d.id}" ${d.id<0?'style="display:none;" disabled="disabled"':''}/></td>
 		<td class="menuTool" keyIndex="${d.id}" v="${d.id<0?'true':''}">&nbsp;</td>
-		<td>${fn:escapeXml(d.typename)}${d.exalias==''?'':' - '}${fn:escapeXml(d.exname)}</td>
+		<td>${fn:escapeXml(d.typename)}${d.exname==''?'':' - '}${fn:escapeXml(d.exname)}</td>
 		<td style="text-align:left;">&nbsp;${fn:escapeXml(d.account)}(${fn:escapeXml(d.name)})</td>
 		<td>${fn:escapeXml(d.orgpname)}</td>
 		<td>${fn:escapeXml(d.orgname)}</td>
