@@ -14,7 +14,8 @@ $dswork.callback = function(){if($dswork.result.code == 1){
 $dswork.readySubmit = function(){
 	$("#password").val($("#password1").val());
 	$("#typename").val($("#type option:selected").text());
-	$("#exname").val($("#exalias option:selected").text());
+	var exname = $("#exalias option:selected").text();
+	$("#exname").val(exname == "暂无可选项" ? "" : exname);
 };
 var map = new $jskey.Map();
 var typekey = "";
