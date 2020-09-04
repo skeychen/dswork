@@ -26,7 +26,8 @@ $dswork.callback = function(){if($dswork.result.code == 1){
 	<tr>
 		<td class="title">样例列表</td>
 		<td class="menuTool">
-			<a class="excel" href="${ctx}/manage/excel/export.htm">导出</a>
+			<a class="excel" href="${ctx}/manage/excel/export.htm?ext=xls">导出xls</a>
+			<a class="excel" href="${ctx}/manage/excel/export.htm?ext=xlsx">导出xlsx</a>
 			<a class="insert" href="addDemo1.htm?page=${pageModel.page}">添加</a>
 			<a class="delete" id="listFormDelAll" href="#">删除所选</a>
 		</td>

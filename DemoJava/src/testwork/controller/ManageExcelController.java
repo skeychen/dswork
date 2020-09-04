@@ -38,6 +38,7 @@ public class ManageExcelController extends BaseController
 	{
 		Page<Demo> pageModel = service.queryPage(getPageRequest());
 		put("list", pageModel.getResult());
+		put("ext", req().getString("ext").equalsIgnoreCase("xls")?"xls":"xlsx");
 		return "/manage/excel/export.jsp";
 	}
 	
@@ -68,7 +69,7 @@ public class ManageExcelController extends BaseController
 						is = new ByteArrayInputStream(file.getFileData());
 						if("xls".equals(ext))
 						{
-							wb = new HSSFWorkbook(is);
+							wb = new HSSFWorkbook(is);// 需要增加commons-math3包
 						}
 						else if("xlsx".equals(ext))
 						{
