@@ -127,11 +127,8 @@ if(true)
 	cst.setFillBackgroundColor(org.apache.poi.ss.usermodel.IndexedColors.BLACK.getIndex());
 	
 	cell.setCellStyle(cst);
-	if(ext.equals("xls")){
-	}
-	else{
-		cell.setCellFormula("SUM(" + colstr + "4:" + colstr + titleRow + ")");// 公式中的行列从1开始
-	}
+	cell.setCellValue("");
+	cell.setCellFormula("SUM(" + colstr + "4:" + colstr + titleRow + ")");// 公式中的行列从1开始
 }
 
 if(true)
