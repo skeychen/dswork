@@ -1,3 +1,7 @@
+如果使用到HSSFWorkbook，则需要commons-math3的包
+
+
+
 Version 4.1.1 (2019-10-20)
 	updated dependencies to 
 		Bouncycastle 1.62
