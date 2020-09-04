@@ -3,6 +3,7 @@
     <library name="OFFICE" systemlibrary="false">
         <archive path="/Lib/org/apache/commons/commons-collections4-4.4.jar"/>
         <archive path="/Lib/org/apache/commons/commons-compress-1.20.jar"/>
+        <archive path="/Lib/org/apache/commons/commons-math3-3.6.1.jar"/>
         <archive path="/Lib/org/apache/poi/poi-4.1.2.jar"/>
         <archive path="/Lib/org/apache/poi/poi-ooxml-4.1.2.jar"/>
         <archive path="/Lib/org/apache/poi/poi-ooxml-schemas-4.1.2.jar"/>
